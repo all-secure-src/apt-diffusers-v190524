@@ -71,6 +71,11 @@ from .omegaspectra import (
     StableDiffusionInpaintPipeline,
     OmegaSpectraPipeline,
 )
+from .omegaspectrav2 import (
+    StableDiffusionXLImg2ImgPipeline,
+    StableDiffusionXLInpaintPipeline,
+    OmegaSpectraV2Pipeline,
+)
 from .wuerstchen import WuerstchenCombinedPipeline, WuerstchenDecoderPipeline
 
 
@@ -79,6 +84,7 @@ AUTO_TEXT2IMAGE_PIPELINES_MAPPING = OrderedDict(
         ("stable-diffusion", StableDiffusionPipeline),
         ("stable-diffusion-xl", StableDiffusionXLPipeline),
         ("omegaspectra", OmegaSpectraPipeline),
+        ("omegaspectrav2", OmegaSpectraV2Pipeline),
         ("if", IFPipeline),
         ("kandinsky", KandinskyCombinedPipeline),
         ("kandinsky22", KandinskyV22CombinedPipeline),

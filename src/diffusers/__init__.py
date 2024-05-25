@@ -321,6 +321,7 @@ else:
             "StableUnCLIPPipeline",
             "StableVideoDiffusionPipeline",
             "OmegaSpectraPipeline",
+            "OmegaSpectraV2Pipeline",
             "TextToVideoSDPipeline",
             "TextToVideoZeroPipeline",
             "TextToVideoZeroSDXLPipeline",
@@ -454,6 +455,7 @@ else:
             "FlaxStableDiffusionInpaintPipeline",
             "FlaxStableDiffusionPipeline",
             "FlaxStableDiffusionXLPipeline",
+            "FlaxOmegaSpectraV2Pipeline"
         ]
     )
 
@@ -702,6 +704,7 @@ if TYPE_CHECKING or DIFFUSERS_SLOW_IMPORT:
             StableUnCLIPImg2ImgPipeline,
             StableUnCLIPPipeline,
             StableVideoDiffusionPipeline,
+            OmegaSpectraV2Pipeline,
             OmegaSpectraPipeline,
             TextToVideoSDPipeline,
             TextToVideoZeroPipeline,
@@ -796,6 +799,7 @@ if TYPE_CHECKING or DIFFUSERS_SLOW_IMPORT:
             FlaxStableDiffusionInpaintPipeline,
             FlaxStableDiffusionPipeline,
             FlaxStableDiffusionXLPipeline,
+            FlaxOmegaSpectraV2Pipeline,
         )
 
     try:

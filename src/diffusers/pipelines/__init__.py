@@ -261,6 +261,14 @@ else:
     _import_structure["stable_diffusion_diffedit"] = ["StableDiffusionDiffEditPipeline"]
     _import_structure["stable_diffusion_ldm3d"] = ["StableDiffusionLDM3DPipeline"]
     _import_structure["stable_diffusion_panorama"] = ["StableDiffusionPanoramaPipeline"]
+    _import_structure["omegaspectrav2"].extend(
+        [
+            "StableDiffusionXLImg2ImgPipeline",
+            "StableDiffusionXLInpaintPipeline",
+            "StableDiffusionXLInstructPix2PixPipeline",
+            "OmegaSpectraV2Pipeline",
+        ]
+    )
     _import_structure["t2i_adapter"] = [
         "StableDiffusionAdapterPipeline",
         "StableDiffusionXLAdapterPipeline",
@@ -353,6 +361,11 @@ else:
     _import_structure["stable_diffusion_xl"].extend(
         [
             "FlaxStableDiffusionXLPipeline",
+        ]
+    )
+    _import_structure["omegaspectrav2"].extend(
+        [
+            "FlaxOmegaSpectraV2Pipeline",
         ]
     )
 
@@ -545,6 +558,12 @@ if TYPE_CHECKING or DIFFUSERS_SLOW_IMPORT:
             StableDiffusionXLPipeline,
         )
         from .stable_video_diffusion import StableVideoDiffusionPipeline
+        from .omegaspectrav2 import (
+            StableDiffusionXLImg2ImgPipeline,
+            StableDiffusionXLInpaintPipeline,
+            StableDiffusionXLInstructPix2PixPipeline,
+            OmegaSpectraV2Pipeline,
+        )
         from .t2i_adapter import (
             StableDiffusionAdapterPipeline,
             StableDiffusionXLAdapterPipeline,
@@ -624,6 +643,9 @@ if TYPE_CHECKING or DIFFUSERS_SLOW_IMPORT:
             )
             from .stable_diffusion_xl import (
                 FlaxStableDiffusionXLPipeline,
+            )
+            from .omegaspectrav2 import (
+                FlaxOmegaSpectraV2Pipeline,
             )
 
         try:
