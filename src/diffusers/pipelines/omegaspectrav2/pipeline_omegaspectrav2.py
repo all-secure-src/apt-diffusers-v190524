@@ -77,7 +77,7 @@ EXAMPLE_DOC_STRING = """
         >>> from diffusers import OmegaSpectraV2Pipeline
 
         >>> pipe = OmegaSpectraV2Pipeline.from_pretrained(
-        ...     "stabilityai/stable-diffusion-xl-base-1.0", torch_dtype=torch.float16
+        ...     "model_path", torch_dtype=torch.float16
         ... )
         >>> pipe = pipe.to("cuda")
 
@@ -824,6 +824,11 @@ class OmegaSpectraV2Pipeline(
         callback_on_step_end_tensor_inputs: List[str] = ["latents"],
         **kwargs,
     ):
+
+        """
+        Function invoked when calling the pipeline for generation.
+
+        """
 
         callback = kwargs.pop("callback", None)
         callback_steps = kwargs.pop("callback_steps", None)
