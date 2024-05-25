@@ -26,6 +26,7 @@ _import_structure = {
     "ledits_pp": [],
     "stable_diffusion": [],
     "stable_diffusion_xl": [],
+    "omegaspectrav2": [],
 }
 
 try:
